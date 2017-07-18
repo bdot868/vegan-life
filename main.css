@@ -55,7 +55,9 @@
 
     }
 
-
+.navbar-default .container-fluid {
+  background-color: rgba(94, 240, 112, 0.65);
+}
   .carousel {
     max-width: 1000px;
     margin: 0 auto;

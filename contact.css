@@ -1,0 +1,16 @@
+.navbar-default .container-fluid {
+  background-color: rgba(94, 240, 112, 0.65);
+}
+h1 {
+  text-align: center;
+}
+.row {
+  max-width: 80%;
+  height: auto;
+  margin: 50px auto;
+}
+
+.row img {
+    max-width: 100%;
+    border-radius: 5px;
+}
