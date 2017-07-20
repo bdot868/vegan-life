@@ -8,7 +8,7 @@
     body {
       font-size: 100%;
       font-family: arial;
-      background: url("http://www.mihomes.com/Images/mktg/promo/161114_ZoneA_Raleigh.jpg");
+      /*background: url("http://www.mihomes.com/Images/mktg/promo/161114_ZoneA_Raleigh.jpg");*/
       background-size: auto;
     }
     i {
@@ -58,6 +58,13 @@
 .navbar-default .container-fluid {
   background-color: rgba(94, 240, 112, 0.65);
 }
+
+.navbar-brand {
+  padding: 0
+}
+.navbar-brand h4 {
+  font-size: 30px
+}
   .carousel {
     max-width: 1000px;
     margin: 0 auto;
@@ -74,6 +81,31 @@
 
 .carousel-caption h3 {
   font-size: 40px;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
 }
 
 .container {
