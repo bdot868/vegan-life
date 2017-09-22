@@ -1,72 +1,35 @@
-@media only screen
-  and (min-width: 375px)
-  and (max-width: 700px) {
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-size: 100%;
-      font-family: arial;
-      /*background: url("http://www.mihomes.com/Images/mktg/promo/161114_ZoneA_Raleigh.jpg");*/
-      background-size: auto;
-    }
-    i {
-      max-width: 100%;
+/*video*/
+    .video-info .form-inline .form-group .form-control {
+      width: 400px;
     }
 
-    /*.fullscreen-bg, .video-content {
-      display: none;
-    }*/
-    .header-unit {
-      height: 0;
+    .video-info .form-inline button {
+      width: 150px;
+      font-size: 16px
     }
-
-    /*Bottom menu*/
-    .bottom-menu {
-      font-size: 3em;
-      bottom: 0;
-      position: fixed;
-      width: 100%;
-      display: inline-block;
-    }
-    .bottom-menu ul a li {
-      color: white;
-      text-decoration: none;
-      text-align: center;
-      float: left;
-      list-style: none;
-      width: 20%;
-      padding: 1.6%;
-      height: 100%;
-      background-color: black;
-      opacity: 0.8;
-      border-bottom: 2px solid black;
-    }
-    .bottom-menu ul a li.selected {
-      opacity: 1;
-      border-bottom: 2px solid red;
-    }
-    .bottom-menu ul a li i{
-      max-height: 1.6em;
-      padding-top: 0.15em;
-      color: white;
-    }
-
-  }
-
-  @media only screen
-    and (min-width: 700px) {
-      .bottom-menu {
-        display: none;
+/*navbar*/
+    .navbar-fixed {
+        top: 0;
+        z-index: 100;
+        position: fixed;
+        width: 100%;
       }
 
-    }
+      .navbar-default {
+        background-color: rgba(94, 240, 112, 0.65);
+        width: 100%;
+        margin-bottom: 0;
+      }
 
 .navbar-default .container-fluid {
   background-color: rgba(94, 240, 112, 0.65);
+  /*margin-bottom: 200;*/
+  height: 75px;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
 .navbar-brand {
   padding: 0
 }
@@ -99,6 +62,13 @@ video {
   width: 100%;
 }
 
+.container-fluid h2 {
+  text-align: center;
+}
+
+.row {
+  margin: 30px auto;
+}
 /*.fullscreen-bg {
   position: relative;
   top: 0;
@@ -118,7 +88,7 @@ video {
 }*/
 
   .carousel {
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     margin: 0 auto;
     /*border-radius: 10px;*/
   }
@@ -128,7 +98,7 @@ video {
   }
 
 .carousel, .carousel img, .carousel-inner, .carousel-control {
-  border-radius: 10px;
+  /*border-radius: 10px;*/
 }
 
 .carousel-caption h3 {
@@ -160,14 +130,14 @@ video {
   z-index: 2;
 }
 
-.container {
+/*.container {
     margin: 20px auto;
     max-width: 1065px;
-}
+}*/
 #featured-img img {
-    width: 310px;
+    width: 400px;
     height: 220px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 .video-content {
@@ -178,8 +148,125 @@ video {
   position: absolute;
   /*top: 0;
   right: 0;*/
-  width: 33%;
-  /*background: rgba(0,0,0, 0.3);*/
+  background: rgba(0,0,0, 0.3);
   color: #fff;
   padding: 1rem;
+  top: 200px;
+  left: 150px;
+  border-radius: 5px;
+}
+
+.box1 {
+  height: 500px;
+}
+
+/*******Events******/
+#upcoming-events {
+  padding: 7em 0;
+  background-color: transparent;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+#upcoming-events > .events-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}
+#upcoming-events > .container {
+  z-index: 10;
+  position: relative;
+}
+#upcoming-events .event-heading .heading {
+  position: relative;
+  padding-top: 30px !important;
+  color: #fff;
+}
+#upcoming-events .event-heading .heading:before, #upcoming-events .event-heading .heading::before {
+  height: 64px;
+  width: 49px;
+  position: absolute;
+  content: "";
+  background: url(../images/0402-chef.png) no-repeat;
+  top: 0;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -24px;
+}
+#upcoming-events .event-heading .sub-heading {
+  color: #a99c92;
+}
+@media screen and (max-width: 768px) {
+  #upcoming-events {
+    padding: 5em 0;
+  }
+}
+#upcoming-events .single-event {
+  background: #fff;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+#upcoming-events .single-event:before {
+  border: 2px solid #e6e6e6;
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  right: 15px;
+  left: 15px;
+  z-index: 0;
+}
+#upcoming-events .single-event h3, #upcoming-events .single-event .single-event-date, #upcoming-events .single-event p, #upcoming-events .single-event .btn {
+  position: relative;
+  z-index: 2;
+}
+#upcoming-events .single-event h3 {
+  padding: 0;
+  margin: 0;
+}
+#upcoming-events .single-event .single-event-date {
+  margin-bottom: 20px;
+  display: block;
+  color: gray;
+  position: relative;
+  padding-bottom: 10px;
+}
+#upcoming-events .single-event .single-event-date:after, #upcoming-events .single-event .single-event-date::after {
+  background: #bfbfbf;
+  background: #fb6e14;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  margin-left: -20px;
+}
+#upcoming-events .single-event p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+#upcoming-events .single-event p:last-child {
+  margin-bottom: 0;
+}
+#upcoming-events .single-event .btn {
+  margin-bottom: 0;
+}
+
+/************************ Recipes ******************************/
+#recipes-box {
+  height: 600px;
+}
+#recipes-box .col-md-8, #recipes-box .col-md-4 {
+  height: 100%;
+  border: 1px solid black;
+}
+#recipes-box .col-md-4 {
+  float: right;
 }
